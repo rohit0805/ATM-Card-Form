@@ -34,13 +34,21 @@
         </div>
         <!--card-rear-->
         <div class="card_rear">
-
+            <div class="rear_img">
+                <div class="magnetic_stripe"></div>
+                <div class="rear_cv">
+                    <div class="cv_text">CV</div>
+                    <div class="cv_hide"><span class="first"></span><span class="second"></span><span class="third"></span><span class="fourth"></span></div>
+                </div>
+            </div>
         </div>
     </header>
+
     <!--form-->
     <form id="form_wrap" action="" method="">
         <label for="card_number" class="card_no">Card Number</label>
         <input type="text" maxlength="25" id="card_number" class="form">
+        
         <label for="card_holder" class="card_hold">Card Holder</label>
         <input type="text" id="card_holder" class="form">
         <label for="expire" class="exp">Valid Thru</label>
@@ -79,7 +87,7 @@
         <label for="card_cv" class="card_cvv">CV</label>
         <input type="password" maxlength="4" id="card_cv" class="form">
         
-        <button class="btn">Submit</button>
+        <a href="#" class="btn">Submit</a>
     </form>
 </body>
 </html>

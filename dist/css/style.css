@@ -7,7 +7,7 @@
 body {
   font-family: "Roboto",sans-serif;
   line-height: 1.2;
-  background-image: linear-gradient(to right, rgba(100, 100, 100, 0.3), white, rgba(100, 100, 100, 0.3));
+  background-image: linear-gradient(to right, rgba(100, 100, 100, 0.1), white, rgba(100, 100, 100, 0.1));
 }
 
 .mastercard_company {
@@ -42,10 +42,12 @@ body {
 #card .card_front .front_img {
   position: relative;
   background: url("../img/50.jpg") no-repeat center center/cover;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.5), -8px -8px 18px 0 rgba(255, 255, 255, 0.5);
   width: 375px;
   height: 250px;
   margin: 1rem auto;
   border-radius: 15px;
+  transition: transform 5s;
 }
 
 #card .card_front .front_img .front_chip {
@@ -212,11 +214,55 @@ body {
   border: 2px solid grey;
 }
 
+#card .card_rear {
+  position: relative;
+}
+
+#card .card_rear .rear_img {
+  position: relative;
+  background: url("../img/50.jpg") no-repeat center center/cover;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.5), -8px -8px 18px 0 rgba(255, 255, 255, 0.5);
+  width: 375px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 15px;
+  top: -266px;
+  transform: rotateY(-90deg);
+  transition: transform 5s;
+}
+
+#card .card_rear .rear_img .magnetic_stripe {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 25px;
+  background-color: #002828;
+}
+
+#card .card_rear .rear_img .rear_cv {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+#card .card_rear .rear_img .rear_cv .cv_text {
+  color: #c8c8c8;
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+#card .card_rear .rear_img .rear_cv .cv_hide {
+  background-color: lightblue;
+  width: 200px;
+  height: 30px;
+  text-align: right;
+}
+
 #form_wrap {
   position: relative;
   max-width: 500px;
   margin: 0 auto;
-  top: -140px;
+  top: -391px;
   border: 2px solid grey;
   border-radius: 15px;
   padding-top: 175px;
@@ -243,8 +289,9 @@ body {
 }
 
 #form_wrap #card_number:focus, #form_wrap #card_holder:focus, #form_wrap #card_cv:focus {
-  border: 1px solid lightseagreen;
+  border: 1px solid lightcyan;
   outline: none;
+  box-shadow: 6px 6px 10px rgba(30, 30, 30, 0.7), -12px 100px whitesmoke;
 }
 
 #form_wrap #expire select {
@@ -255,7 +302,8 @@ body {
 }
 
 #form_wrap #expire select:focus {
-  border: 1px solid lightseagreen;
+  border: 1px solid lightcyan;
+  box-shadow: 6px 6px 10px rgba(30, 30, 30, 0.7), -12px 100px whitesmoke;
   outline: none;
 }
 
@@ -269,20 +317,28 @@ body {
 }
 
 #form_wrap .btn {
+  display: block;
   margin: 1rem;
+  text-decoration: none;
   font-size: 1.2rem;
   padding: 1rem 2rem;
   letter-spacing: 1px;
   border-radius: 15px;
   outline: none;
   color: lightgray;
-  font-size: 1.3rem;
   text-transform: uppercase;
-  background: url("../img/48.jpg") no-repeat center center/cover;
+  background-color: darkcyan;
   opacity: 0.8;
+  width: 140px;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.5), -8px -8px 18px 0 rgba(255, 255, 255, 0.85);
   transition: all 0.5s;
 }
 
 #form_wrap .btn:hover {
+  color: white;
   opacity: 1;
+}
+
+#form_wrap .btn:active {
+  box-shadow: inset 6px 6px 14px 0 rgba(0, 0, 0, 0.5), inset -8px -8px 18px 0 rgba(255, 255, 255, 0.5);
 }
