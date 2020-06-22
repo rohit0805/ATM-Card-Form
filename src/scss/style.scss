@@ -1,0 +1,221 @@
+@import 'variable';
+
+#card{
+    position:relative;
+    z-index:2;
+    .card_front{
+        color:$card-color;
+        position:relative;
+        .front_img{
+            position:relative;
+            background: url('../img/50.jpg') no-repeat center center/cover;
+            width:$card-width;
+            height:$card-height;
+            margin:1rem auto;
+            border-radius:$card-radius;
+            .front_chip{
+                position:absolute;
+                background: url('../img/smart_chip.png') no-repeat center center/cover;
+                width:50px;
+                height:40px;
+                top:60px;
+                left:30px;
+            }
+            .front_number{
+                position: absolute;
+                top:120px;
+                left:20px;
+                border-radius: 10px;
+                padding:0.5rem;
+                border:2px solid transparent;
+                letter-spacing: 4px;
+                word-spacing:10px;
+                font-size:1.1rem;
+                width:335px;
+                transition:all $default-time;
+                &:hover{
+                    border:2px solid $border-color;
+                }
+                .card_no-1,.card_no-2,.card_no-3,.card_no-4,.card_no-5,.card_no-6,.card_no-7,.card_no-8,.card_no-9,.card_no-10,.card_no-11,.card_no-12,.card_no-13,.card_no-14,.card_no-15,.card_no-16{
+                    position:absolute;
+                    transition:all $default-time;
+                }
+                .card_no-1{
+                    left:1rem;
+                }
+                .card_no-2{
+                    left:2rem;
+                }
+                .card_no-3{
+                    left:3rem;
+                }
+                .card_no-4{
+                    left:4rem;
+                }
+                .card_no-5{
+                    left:6rem;
+                }
+                .card_no-6{
+                    left:7rem;
+                }
+                .card_no-7{
+                    left:8rem;
+                }
+                .card_no-8{
+                    left:9rem;
+                }
+                .card_no-9{
+                    left:11rem;
+                }
+                .card_no-10{
+                    left:12rem;
+                }
+                .card_no-11{
+                    left:13rem;
+                }
+                .card_no-12{
+                    left:14rem;
+                }
+                .card_no-13{
+                    left:16rem;
+                }
+                .card_no-14{
+                    left:17rem;
+                }
+                .card_no-15{
+                    left:18rem;
+                }
+                .card_no-16{
+                    left:19rem;
+                }
+            }
+            .front_holder{
+                transition:all $default-time;
+                position: absolute;
+                bottom:15px;
+                left:20px;
+                padding:0.5rem;
+                border-radius:10px;
+                width:200px;
+                height:65px;
+                border:2px solid transparent;
+                
+                .holder_text{
+                    letter-spacing: 1px;
+                    padding-bottom:0.5rem;
+                }
+                .holder_name{
+                    text-transform: uppercase;
+                    letter-spacing:1px;
+                    word-spacing:2px;
+                    font-size:1.2rem;
+                    overflow: hidden;
+                }
+                &:hover{
+                    border:2px solid $border-color;
+                }
+
+            }
+            .front_valid{
+                transition:all $default-time;
+                position:absolute;
+                right:20px;
+                bottom:15px;
+                padding:0.5rem;
+                border-radius:10px;
+                border:2px solid transparent;
+                width:110px;
+                height:65px;
+                .valid_text{
+                    padding-bottom:0.5rem;
+                    letter-spacing: 1px;
+                }
+                .valid_to{
+                    font-size:1.2rem;
+                    overflow:hidden;
+                }
+                &:hover{
+                    border:2px solid $border-color;
+                }
+            }
+            .front_company{
+                position: absolute;
+                top:25px; 
+                right:20px;
+                border:2px solid transparent;
+                border-radius:15px;
+                padding:0.5rem;
+                &:hover{
+                    border:2px solid $border-color;
+                }
+            }
+        }
+    }
+}
+
+#form_wrap{
+    position:relative;
+    max-width:500px;
+    margin:0 auto;
+    top:-140px;
+    border:2px solid  $border-color;
+    border-radius:15px;
+    padding-top:175px;
+    height:700px;
+    .form{
+        display:block;
+        padding:0.5rem;
+    }
+    #card_number,.card_no,#card_holder,.card_hold,#expire,.exp,#card_cv,.card_cvv{
+        margin:1rem;
+        letter-spacing:1px;
+        word-spacing: 3px;
+        max-width:320px;
+        width:80%;
+        font-size:1.2rem;
+    }
+    #card_number,#card_holder,#card_cv{
+        border:1px solid $light-color;
+        border-radius:15px;
+        &:focus{
+            border:1px solid lightseagreen;
+            outline:none;
+        }
+    }
+    #expire{
+        select{
+            padding:0.5rem;
+            font-size:1.2rem;
+            border:1px solid $light-color;
+            border-radius:15px;
+            &:focus{
+                border:1px solid lightseagreen;
+                outline:none;
+            }
+            option:not(:disabled){
+                color:$card-color;
+                background-color: teal;
+            }
+            option:focus,option:checked{
+                border:none;
+            }
+        }
+    }
+    .btn{
+        margin:1rem;
+        font-size:1.2rem;
+        padding:1rem 2rem;
+        letter-spacing: 1px;
+        border-radius:15px;
+        outline:none;
+        color:lightgray;
+        font-size:1.3rem;
+        text-transform: uppercase;
+        background: url('../img/48.jpg') no-repeat center center/cover;
+        opacity:0.8;
+        transition:all $default-time;
+        &:hover{
+            opacity:1;
+        } 
+    }
+}

@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto",sans-serif;
+  line-height: 1.2;
+  background-image: linear-gradient(to right, rgba(100, 100, 100, 0.3), white, rgba(100, 100, 100, 0.3));
+}
+
+.mastercard_company {
+  background: url("../img/mastercard.png") no-repeat center center/cover;
+  width: 75px;
+  height: 46px;
+}
+
+.visa_company {
+  background: url("../img/visa.png") no-repeat center center/cover;
+  width: 60px;
+  height: 38px;
+  border-radius: 4px;
+}
+
+.american_company {
+  background: url("../img/american.png") no-repeat center center/cover;
+  width: 80px;
+  height: 40px;
+}
+
+#card {
+  position: relative;
+  z-index: 2;
+}
+
+#card .card_front {
+  color: #c8c8c8;
+  position: relative;
+}
+
+#card .card_front .front_img {
+  position: relative;
+  background: url("../img/50.jpg") no-repeat center center/cover;
+  width: 375px;
+  height: 250px;
+  margin: 1rem auto;
+  border-radius: 15px;
+}
+
+#card .card_front .front_img .front_chip {
+  position: absolute;
+  background: url("../img/smart_chip.png") no-repeat center center/cover;
+  width: 50px;
+  height: 40px;
+  top: 60px;
+  left: 30px;
+}
+
+#card .card_front .front_img .front_number {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 2px solid transparent;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+  font-size: 1.1rem;
+  width: 335px;
+  transition: all 0.5s;
+}
+
+#card .card_front .front_img .front_number:hover {
+  border: 2px solid grey;
+}
+
+#card .card_front .front_img .front_number .card_no-1, #card .card_front .front_img .front_number .card_no-2, #card .card_front .front_img .front_number .card_no-3, #card .card_front .front_img .front_number .card_no-4, #card .card_front .front_img .front_number .card_no-5, #card .card_front .front_img .front_number .card_no-6, #card .card_front .front_img .front_number .card_no-7, #card .card_front .front_img .front_number .card_no-8, #card .card_front .front_img .front_number .card_no-9, #card .card_front .front_img .front_number .card_no-10, #card .card_front .front_img .front_number .card_no-11, #card .card_front .front_img .front_number .card_no-12, #card .card_front .front_img .front_number .card_no-13, #card .card_front .front_img .front_number .card_no-14, #card .card_front .front_img .front_number .card_no-15, #card .card_front .front_img .front_number .card_no-16 {
+  position: absolute;
+  transition: all 0.5s;
+}
+
+#card .card_front .front_img .front_number .card_no-1 {
+  left: 1rem;
+}
+
+#card .card_front .front_img .front_number .card_no-2 {
+  left: 2rem;
+}
+
+#card .card_front .front_img .front_number .card_no-3 {
+  left: 3rem;
+}
+
+#card .card_front .front_img .front_number .card_no-4 {
+  left: 4rem;
+}
+
+#card .card_front .front_img .front_number .card_no-5 {
+  left: 6rem;
+}
+
+#card .card_front .front_img .front_number .card_no-6 {
+  left: 7rem;
+}
+
+#card .card_front .front_img .front_number .card_no-7 {
+  left: 8rem;
+}
+
+#card .card_front .front_img .front_number .card_no-8 {
+  left: 9rem;
+}
+
+#card .card_front .front_img .front_number .card_no-9 {
+  left: 11rem;
+}
+
+#card .card_front .front_img .front_number .card_no-10 {
+  left: 12rem;
+}
+
+#card .card_front .front_img .front_number .card_no-11 {
+  left: 13rem;
+}
+
+#card .card_front .front_img .front_number .card_no-12 {
+  left: 14rem;
+}
+
+#card .card_front .front_img .front_number .card_no-13 {
+  left: 16rem;
+}
+
+#card .card_front .front_img .front_number .card_no-14 {
+  left: 17rem;
+}
+
+#card .card_front .front_img .front_number .card_no-15 {
+  left: 18rem;
+}
+
+#card .card_front .front_img .front_number .card_no-16 {
+  left: 19rem;
+}
+
+#card .card_front .front_img .front_holder {
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 200px;
+  height: 65px;
+  border: 2px solid transparent;
+}
+
+#card .card_front .front_img .front_holder .holder_text {
+  letter-spacing: 1px;
+  padding-bottom: 0.5rem;
+}
+
+#card .card_front .front_img .front_holder .holder_name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+#card .card_front .front_img .front_holder:hover {
+  border: 2px solid grey;
+}
+
+#card .card_front .front_img .front_valid {
+  transition: all 0.5s;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  width: 110px;
+  height: 65px;
+}
+
+#card .card_front .front_img .front_valid .valid_text {
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+#card .card_front .front_img .front_valid .valid_to {
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+#card .card_front .front_img .front_valid:hover {
+  border: 2px solid grey;
+}
+
+#card .card_front .front_img .front_company {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+
+#card .card_front .front_img .front_company:hover {
+  border: 2px solid grey;
+}
+
+#form_wrap {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  top: -140px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding-top: 175px;
+  height: 700px;
+}
+
+#form_wrap .form {
+  display: block;
+  padding: 0.5rem;
+}
+
+#form_wrap #card_number, #form_wrap .card_no, #form_wrap #card_holder, #form_wrap .card_hold, #form_wrap #expire, #form_wrap .exp, #form_wrap #card_cv, #form_wrap .card_cvv {
+  margin: 1rem;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  max-width: 320px;
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+#form_wrap #card_number, #form_wrap #card_holder, #form_wrap #card_cv {
+  border: 1px solid rgba(100, 100, 100, 0.7);
+  border-radius: 15px;
+}
+
+#form_wrap #card_number:focus, #form_wrap #card_holder:focus, #form_wrap #card_cv:focus {
+  border: 1px solid lightseagreen;
+  outline: none;
+}
+
+#form_wrap #expire select {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid rgba(100, 100, 100, 0.7);
+  border-radius: 15px;
+}
+
+#form_wrap #expire select:focus {
+  border: 1px solid lightseagreen;
+  outline: none;
+}
+
+#form_wrap #expire select option:not(:disabled) {
+  color: #c8c8c8;
+  background-color: teal;
+}
+
+#form_wrap #expire select option:focus, #form_wrap #expire select option:checked {
+  border: none;
+}
+
+#form_wrap .btn {
+  margin: 1rem;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  outline: none;
+  color: lightgray;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  background: url("../img/48.jpg") no-repeat center center/cover;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+#form_wrap .btn:hover {
+  opacity: 1;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>ATM Card || Form</title>
+</head>
+<body>
+    <!--card-->
+    <header id=card>
+        <!--card-front-->
+        <div class="card_front">
+            <div class="front_img">
+                <div class="front_chip"></div>
+                <div class="front_number">&nbsp;
+                    <span class="card_no-1">X</span><span class="card_no-2">X</span><span class="card_no-3">X</span><span class="card_no-4">X</span>
+                    <span class="card_no-5">X</span><span class="card_no-6">X</span><span class="card_no-7">X</span><span class="card_no-8">X</span>
+                    <span class="card_no-9">X</span><span class="card_no-10">X</span><span class="card_no-11">X</span><span class="card_no-12">X</span>
+                    <span class="card_no-13">X</span><span class="card_no-14">X</span><span class="card_no-15">X</span><span class="card_no-16">X</span>
+                </div>
+                <div class="front_holder">
+                    <div class="holder_text">Card Holder</div>
+                    <div class="holder_name">your name</div>
+                </div>
+                <div class="front_valid">
+                    <div class="valid_text">Expires</div>
+                    <div class="valid_to"><span class="valid_month">Mn </span>/ <span class="valid_year">Yr</span></div>
+                </div>
+                <div class="front_company">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <!--card-rear-->
+        <div class="card_rear">
+
+        </div>
+    </header>
+    <!--form-->
+    <form id="form_wrap" action="" method="">
+        <label for="card_number" class="card_no">Card Number</label>
+        <input type="text" maxlength="25" id="card_number" class="form">
+        <label for="card_holder" class="card_hold">Card Holder</label>
+        <input type="text" id="card_holder" class="form">
+        <label for="expire" class="exp">Valid Thru</label>
+        <div id="expire">
+            <select>
+                <option selected disabled>Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <select>
+                <option selected disabled>Year</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+            </select>
+        </div>
+        <label for="card_cv" class="card_cvv">CV</label>
+        <input type="password" maxlength="4" id="card_cv" class="form">
+        
+        <button class="btn">Submit</button>
+    </form>
+</body>
+</html>
