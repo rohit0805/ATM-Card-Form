@@ -3,7 +3,7 @@ $border-color:grey;
 $light-color:rgba(100,100,100,0.7);
 $card-width:375px;
 $card-height:250px;
-$rotate-time:5s;
+$rotate-time:1s;
 $card-radius:15px;
 $default-time:0.5s;
 
@@ -16,7 +16,6 @@ body{
     font-family:"Roboto",sans-serif;
     line-height:1.2;
     background-image: linear-gradient(to right,rgba(100,100,100,0.1),white,rgba(100,100,100,0.1));
-    overflow:hidden;
 }
 
 .mastercard_company{

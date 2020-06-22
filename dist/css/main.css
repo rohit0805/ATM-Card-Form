@@ -29,6 +29,37 @@ body {
   height: 40px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto",sans-serif;
+  line-height: 1.2;
+  background-image: linear-gradient(to right, rgba(100, 100, 100, 0.1), white, rgba(100, 100, 100, 0.1));
+}
+
+.mastercard_company {
+  background: url("../img/mastercard.png") no-repeat center center/cover;
+  width: 75px;
+  height: 46px;
+}
+
+.visa_company {
+  background: url("../img/visa.png") no-repeat center center/cover;
+  width: 60px;
+  height: 38px;
+  border-radius: 4px;
+}
+
+.american_company {
+  background: url("../img/american.png") no-repeat center center/cover;
+  width: 80px;
+  height: 40px;
+}
+
 #card {
   position: relative;
   z-index: 3;
@@ -43,8 +74,9 @@ body {
   position: relative;
   background: url("../img/50.jpg") no-repeat center center/cover;
   box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.5), -8px -8px 18px 0 rgba(255, 255, 255, 0.5);
-  width: 375px;
-  height: 250px;
+  max-width: 320px;
+  width: 100%;
+  height: 200px;
   margin: 1rem auto;
   border-radius: 15px;
   transition: transform 1s;
@@ -53,23 +85,20 @@ body {
 #card .card_front .front_img .front_chip {
   position: absolute;
   background: url("../img/smart_chip.png") no-repeat center center/cover;
-  width: 50px;
-  height: 40px;
-  top: 60px;
-  left: 30px;
+  width: 40px;
+  height: 30px;
+  top: 30px;
+  left: 15px;
 }
 
 #card .card_front .front_img .front_number {
   position: absolute;
-  top: 120px;
-  left: 20px;
+  top: 80px;
+  padding: 0.5rem 0;
   border-radius: 10px;
-  padding: 0.5rem;
   border: 2px solid transparent;
-  letter-spacing: 4px;
-  word-spacing: 10px;
-  font-size: 1.1rem;
-  width: 335px;
+  font-size: 1rem;
+  width: 100%;
   transition: all 0.5s;
 }
 
@@ -83,77 +112,77 @@ body {
 }
 
 #card .card_front .front_img .front_number .card_no-1 {
-  left: 1rem;
+  left: 0.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-2 {
-  left: 2rem;
+  left: 1.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-3 {
-  left: 3rem;
+  left: 2.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-4 {
-  left: 4rem;
+  left: 3.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-5 {
-  left: 6rem;
+  left: 5.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-6 {
-  left: 7rem;
+  left: 6.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-7 {
-  left: 8rem;
+  left: 7.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-8 {
-  left: 9rem;
+  left: 8.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-9 {
-  left: 11rem;
+  left: 10.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-10 {
-  left: 12rem;
+  left: 11.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-11 {
-  left: 13rem;
+  left: 12.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-12 {
-  left: 14rem;
+  left: 13.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-13 {
-  left: 16rem;
+  left: 15.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-14 {
-  left: 17rem;
+  left: 16.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-15 {
-  left: 18rem;
+  left: 17.5rem;
 }
 
 #card .card_front .front_img .front_number .card_no-16 {
-  left: 19rem;
+  left: 18.5rem;
 }
 
 #card .card_front .front_img .front_holder {
   transition: all 0.5s;
   position: absolute;
   bottom: 15px;
-  left: 20px;
-  padding: 0.5rem;
+  left: 10px;
+  padding: 0.5rem 0.2rem;
   border-radius: 10px;
-  width: 200px;
+  width: 180px;
   height: 65px;
   border: 2px solid transparent;
 }
@@ -161,13 +190,13 @@ body {
 #card .card_front .front_img .front_holder .holder_text {
   letter-spacing: 1px;
   padding-bottom: 0.5rem;
+  font-size: 0.8rem;
 }
 
 #card .card_front .front_img .front_holder .holder_name {
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
-  font-size: 1.2rem;
   overflow: hidden;
 }
 
@@ -178,7 +207,7 @@ body {
 #card .card_front .front_img .front_valid {
   transition: all 0.5s;
   position: absolute;
-  right: 20px;
+  right: 10px;
   bottom: 15px;
   padding: 0.5rem;
   border-radius: 10px;
@@ -190,10 +219,10 @@ body {
 #card .card_front .front_img .front_valid .valid_text {
   padding-bottom: 0.5rem;
   letter-spacing: 1px;
+  font-size: 0.8rem;
 }
 
 #card .card_front .front_img .front_valid .valid_to {
-  font-size: 1.2rem;
   overflow: hidden;
 }
 
@@ -203,8 +232,8 @@ body {
 
 #card .card_front .front_img .front_company {
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   border: 2px solid transparent;
   border-radius: 15px;
   padding: 0.5rem;
@@ -233,7 +262,7 @@ body {
 
 #card .card_front .front_img .rear_img .img .mag_strip {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 0;
   width: 100%;
   height: 40px;
@@ -242,7 +271,7 @@ body {
 
 #card .card_front .front_img .rear_img .img .cv_link {
   position: absolute;
-  top: 100px;
+  top: 60px;
   left: 20px;
   border: 2px solid transparent;
   text-align: right;
@@ -269,9 +298,10 @@ body {
 
 #form_wrap {
   position: relative;
-  max-width: 500px;
+  max-width: 480px;
+  width: 99%;
   margin: 0 auto;
-  top: -150px;
+  top: -115px;
   border: 2px solid grey;
   border-radius: 15px;
   padding-top: 175px;
@@ -288,7 +318,7 @@ body {
   letter-spacing: 1px;
   word-spacing: 3px;
   max-width: 320px;
-  width: 80%;
+  width: 90%;
   font-size: 1.2rem;
 }
 
