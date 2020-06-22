@@ -8,6 +8,7 @@ body {
   font-family: "Roboto",sans-serif;
   line-height: 1.2;
   background-image: linear-gradient(to right, rgba(100, 100, 100, 0.1), white, rgba(100, 100, 100, 0.1));
+  overflow: hidden;
 }
 
 .mastercard_company {
@@ -214,59 +215,64 @@ body {
   border: 2px solid grey;
 }
 
-#card .card_rear {
-  position: relative;
-}
-
-#card .card_rear .rear_img {
-  position: relative;
+#card .card_front .front_img .rear_img .img {
+  position: absolute;
+  top: 0;
+  left: 0;
   background: url("../img/50.jpg") no-repeat center center/cover;
   box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.5), -8px -8px 18px 0 rgba(255, 255, 255, 0.5);
-  width: 375px;
-  height: 250px;
-  margin: 0 auto;
-  border-radius: 15px;
-  top: -266px;
-  transform: rotateY(-90deg);
-  transition: transform 5s;
-}
-
-#card .card_rear .rear_img .magnetic_stripe {
-  position: absolute;
   width: 100%;
-  height: 50px;
-  top: 25px;
-  background-color: #002828;
+  height: 100%;
+  border-radius: 15px;
+  transition: transform 5s;
+  transform: rotateY(-90deg);
 }
 
-#card .card_rear .rear_img .rear_cv {
+#card .card_front .front_img .rear_img .img .mag_strip {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-image: linear-gradient(to right, black, #3b3b3b, black);
+}
+
+#card .card_front .front_img .rear_img .img .cv_link {
   position: absolute;
   top: 100px;
-  left: 30px;
+  left: 20px;
+  border: 2px solid transparent;
+  text-align: right;
 }
 
-#card .card_rear .rear_img .rear_cv .cv_text {
-  color: #c8c8c8;
-  text-align: right;
+#card .card_front .front_img .rear_img .img .cv_link .cv_text {
   font-size: 1.2rem;
+  margin: 0.5rem;
 }
 
-#card .card_rear .rear_img .rear_cv .cv_hide {
-  background-color: lightblue;
-  width: 200px;
+#card .card_front .front_img .rear_img .img .cv_link .cv_hide {
+  background-color: white;
+  width: 180px;
+  color: black;
+  padding: 0.5rem;
   height: 30px;
-  text-align: right;
+  margin: 0.5rem;
+}
+
+#card .card_front .front_img .rear_img .img .cv_link:hover {
+  border: 2px solid grey;
+  border-radius: 15px;
 }
 
 #form_wrap {
   position: relative;
   max-width: 500px;
   margin: 0 auto;
-  top: -391px;
+  top: -150px;
   border: 2px solid grey;
   border-radius: 15px;
   padding-top: 175px;
-  height: 700px;
+  height: 585px;
 }
 
 #form_wrap .form {
@@ -275,7 +281,7 @@ body {
 }
 
 #form_wrap #card_number, #form_wrap .card_no, #form_wrap #card_holder, #form_wrap .card_hold, #form_wrap #expire, #form_wrap .exp, #form_wrap #card_cv, #form_wrap .card_cvv {
-  margin: 1rem;
+  margin: 0.7rem;
   letter-spacing: 1px;
   word-spacing: 3px;
   max-width: 320px;
