@@ -1,7 +1,5 @@
 @import 'variable';
 
-@import 'variable';
-
 #card{
     position:relative;
     z-index:3;
@@ -185,7 +183,7 @@
         &:focus{
             border:1px solid lightcyan;
             outline:none;
-            box-shadow:6px 6px 10px rgba(30,30,30,0.7),-6px-6px 100px whitesmoke;
+            box-shadow:6px 6px 4px rgba(30,30,30,0.7),-6px-6px 4px whitesmoke;
         }
     }
     #expire{
@@ -196,7 +194,7 @@
             border-radius:15px;
             &:focus{
                 border:1px solid lightcyan;
-                box-shadow:6px 6px 10px rgba(30,30,30,0.7),-6px-6px 100px whitesmoke;
+                box-shadow:6px 6px 4px rgba(30,30,30,0.7),-6px-6px 4px whitesmoke;
                 outline:none;
             }
             option:not(:disabled){

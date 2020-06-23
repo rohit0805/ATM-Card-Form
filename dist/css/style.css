@@ -257,7 +257,7 @@ body {
 #form_wrap #card_number:focus, #form_wrap #card_holder:focus, #form_wrap #card_cv:focus {
   border: 1px solid lightcyan;
   outline: none;
-  box-shadow: 6px 6px 10px rgba(30, 30, 30, 0.7), -12px 100px whitesmoke;
+  box-shadow: 6px 6px 4px rgba(30, 30, 30, 0.7), -12px 4px whitesmoke;
 }
 
 #form_wrap #expire select {
@@ -270,7 +270,7 @@ body {
 
 #form_wrap #expire select:focus {
   border: 1px solid lightcyan;
-  box-shadow: 6px 6px 10px rgba(30, 30, 30, 0.7), -12px 100px whitesmoke;
+  box-shadow: 6px 6px 4px rgba(30, 30, 30, 0.7), -12px 4px whitesmoke;
   outline: none;
 }
 
@@ -307,7 +307,7 @@ body {
 }
 
 #form_wrap .btn:active {
-  box-shadow: inset 6px 6px 14px 0 rgba(0, 0, 0, 0.5), inset -8px -8px 18px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 6px 6px 4px 0 rgba(0, 0, 0, 0.5), inset -4px -4px 4px 0 rgba(255, 255, 255, 0.5);
 }
 
 .rear_img {
@@ -319,7 +319,7 @@ body {
   top: -851px;
   margin: 0 auto;
   background: url("../img/50.jpg") no-repeat center center/cover;
-  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.5), -8px -8px 18px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.5), -8px -8px 8px 0 rgba(255, 255, 255, 0.5);
   width: 375px;
   height: 250px;
   border-radius: 15px;
@@ -347,7 +347,6 @@ body {
 .rear_img .img .cv_link .cv_text {
   font-size: 1.2rem;
   margin: 0.5rem;
-  color: white;
 }
 
 .rear_img .img .cv_link .cv_hide {

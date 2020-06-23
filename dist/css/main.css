@@ -37,45 +37,6 @@ body {
   transform: rotateY(90deg) !important;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto",sans-serif;
-  line-height: 1.2;
-  background-image: linear-gradient(to right, rgba(100, 100, 100, 0.1), white, rgba(100, 100, 100, 0.1));
-}
-
-.mastercard_company {
-  background: url("../img/mastercard.png") no-repeat center center/cover;
-  width: 75px;
-  height: 46px;
-}
-
-.visa_company {
-  background: url("../img/visa.png") no-repeat center center/cover;
-  width: 60px;
-  height: 38px;
-  border-radius: 4px;
-}
-
-.american_company {
-  background: url("../img/american.png") no-repeat center center/cover;
-  width: 80px;
-  height: 40px;
-}
-
-.rotate_clock {
-  transform: rotateY(0deg) !important;
-}
-
-.rotate_front {
-  transform: rotateY(90deg) !important;
-}
-
 #card {
   position: relative;
   z-index: 3;
@@ -293,7 +254,7 @@ body {
 #form_wrap #card_number:focus, #form_wrap #card_holder:focus, #form_wrap #card_cv:focus {
   border: 1px solid lightcyan;
   outline: none;
-  box-shadow: 6px 6px 10px rgba(30, 30, 30, 0.7), -12px 100px whitesmoke;
+  box-shadow: 6px 6px 4px rgba(30, 30, 30, 0.7), -12px 4px whitesmoke;
 }
 
 #form_wrap #expire select {
@@ -305,7 +266,7 @@ body {
 
 #form_wrap #expire select:focus {
   border: 1px solid lightcyan;
-  box-shadow: 6px 6px 10px rgba(30, 30, 30, 0.7), -12px 100px whitesmoke;
+  box-shadow: 6px 6px 4px rgba(30, 30, 30, 0.7), -12px 4px whitesmoke;
   outline: none;
 }
 

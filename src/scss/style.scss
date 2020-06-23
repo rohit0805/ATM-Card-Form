@@ -184,7 +184,7 @@
         &:focus{
             border:1px solid lightcyan;
             outline:none;
-            box-shadow:6px 6px 10px rgba(30,30,30,0.7),-6px-6px 100px whitesmoke;
+            box-shadow:6px 6px 4px rgba(30,30,30,0.7),-6px-6px 4px whitesmoke;
         }
         color:$text-color;
         text-transform: capitalize;;
@@ -198,7 +198,7 @@
             color:$text-color;
             &:focus{
                 border:1px solid lightcyan;
-                box-shadow:6px 6px 10px rgba(30,30,30,0.7),-6px-6px 100px whitesmoke;
+                box-shadow:6px 6px 4px rgba(30,30,30,0.7),-6px-6px 4px whitesmoke;
                 outline:none;
             }
             option:not(:disabled){
@@ -231,7 +231,7 @@
             opacity:1;
         } 
         &:active{
-            box-shadow:inset 6px 6px 14px 0 rgba(0,0,0,0.5),inset -8px -8px 18px 0 rgba(255,255,255,0.5);
+            box-shadow:inset 6px 6px 4px 0 rgba(0,0,0,0.5),inset -4px -4px 4px 0 rgba(255,255,255,0.5);
         }
     }
 }
@@ -243,7 +243,7 @@
         top:-851px;
         margin:0 auto;
         background: url('../img/50.jpg') no-repeat center center/cover;
-        box-shadow:6px 6px 14px 0 rgba(0,0,0,0.5),-8px -8px 18px 0 rgba(255,255,255,0.5);
+        box-shadow:6px 6px 8px 0 rgba(0,0,0,0.5),-8px -8px 8px 0 rgba(255,255,255,0.5);
         width:$card-width;
         height:$card-height;
         border-radius: 15px;
@@ -266,7 +266,6 @@
             .cv_text{
                 font-size:1.2rem;
                 margin:0.5rem;
-                color:white;
             }
             .cv_hide{
                 background-color: white;
