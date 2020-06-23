@@ -15,7 +15,8 @@ var UIController=(function(){
         card_month:document.querySelector(DOMstring.card_month),
         card_year:document.querySelector(DOMstring.card_year),
         card_cv:document.querySelector(DOMstring.card_cv),
-        company:document.querySelector(DOMstring.company)
+        company:document.querySelector(DOMstring.company),
+        name:document.querySelector(DOMstring.holder_name)
     };
     
     var month_arr=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -53,6 +54,12 @@ var UIController=(function(){
                 else{
                     selector.company.classList.add('american_company');
                 }
+            }
+        },
+        AddCardHolder:function(name){
+            selector.name.innerHTML=name;
+            if(name.length===0){
+                selector.name.innerHTML="YOUR NAME";
             }
         }
     }
@@ -120,7 +127,7 @@ var Controller=(function(UICtrl){
         selector.card_holder.value=str;
 
         //4.updating the card front
-        //UICtrl.AddCardHolder(str);
+        UICtrl.AddCardHolder(str);
     }
 
     var ManageCardMonth=function(event){
