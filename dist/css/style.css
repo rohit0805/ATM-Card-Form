@@ -295,6 +295,8 @@ body {
 #form_wrap #card_number, #form_wrap #card_holder, #form_wrap #card_cv {
   border: 1px solid rgba(100, 100, 100, 0.7);
   border-radius: 15px;
+  color: #3b5978;
+  text-transform: capitalize;
 }
 
 #form_wrap #card_number:focus, #form_wrap #card_holder:focus, #form_wrap #card_cv:focus {
@@ -308,6 +310,7 @@ body {
   font-size: 1.2rem;
   border: 1px solid rgba(100, 100, 100, 0.7);
   border-radius: 15px;
+  color: #3b5978;
 }
 
 #form_wrap #expire select:focus {

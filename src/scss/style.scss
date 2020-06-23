@@ -231,6 +231,8 @@
             outline:none;
             box-shadow:6px 6px 10px rgba(30,30,30,0.7),-6px-6px 100px whitesmoke;
         }
+        color:$text-color;
+        text-transform: capitalize;;
     }
     #expire{
         select{
@@ -238,6 +240,7 @@
             font-size:1.2rem;
             border:1px solid $light-color;
             border-radius:15px;
+            color:$text-color;
             &:focus{
                 border:1px solid lightcyan;
                 box-shadow:6px 6px 10px rgba(30,30,30,0.7),-6px-6px 100px whitesmoke;
