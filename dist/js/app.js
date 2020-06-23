@@ -66,7 +66,8 @@ var Controller=(function(UICtrl){
         selector.card_number.value=copy;
 
         //5.updating the cardfront(the number is stored in str)
-        //use of UICtrl(later )
+        //UICtrl.AddCardNumber(str);
+
     };
 
     var ManageCardHolder=function(event){
@@ -83,8 +84,37 @@ var Controller=(function(UICtrl){
         selector.card_holder.value=str;
 
         //4.updating the card front
-
+        //UICtrl.AddCardHolder(str);
     }
+
+    var ManageCardMonth=function(event){
+        //1.get the input 
+        var month=selector.card_month.value;
+        //2.updating the card front
+        //UICtrl.AddCardMonth(month);
+    };
+
+    var ManageCardYear=function(event){
+        //1.get the input
+        var year=selector.card_year.value;
+        //2.updating the card front
+        //UICtrl.AddCardYear(year);
+    };
+
+    var ManageCardCV=function(event){
+        //1.get the input
+        var cv=selector.card_cv.value;
+        if(!(parseInt(event.data)>=0 && parseInt(event.data)<=9) && event.inputType!=="deleteContentBackward"){
+            //startindex and lastindex
+            cv=cv.substring(0,cv.length-1);
+        }
+        //2.updating the input type
+        selector.card_cv.value=cv;
+
+        //3.updating the card rear
+        //UICtrl.AddCardCV(cv);
+
+    };
 
     var SetupEventListener=function(){
         selector.card_number.addEventListener("input",function(event){
@@ -92,6 +122,15 @@ var Controller=(function(UICtrl){
         });
         selector.card_holder.addEventListener("input",function(){
             ManageCardHolder(event);
+        });
+        selector.card_month.addEventListener("change",function(event){
+            ManageCardMonth(event);
+        });
+        selector.card_year.addEventListener("change",function(event){
+            ManageCardYear(event);
+        });
+        selector.card_cv.addEventListener("input",function(event){
+            ManageCardCV(event);
         });
     };
 
