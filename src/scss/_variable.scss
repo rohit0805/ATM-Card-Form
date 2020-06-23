@@ -3,7 +3,7 @@ $border-color:grey;
 $light-color:rgba(100,100,100,0.7);
 $card-width:375px;
 $card-height:250px;
-$rotate-time:1s;
+$rotate-time:0.5s;
 $card-radius:15px;
 $default-time:0.5s;
 
@@ -37,4 +37,12 @@ body{
     background:url('../img/american.png') no-repeat center center/cover;
     width:80px;
     height:40px;  
+}
+
+.rotate_clock{
+    transform:rotateY(0deg)!important;
+}
+
+.rotate_front{
+    transform: rotateY(90deg)!important;
 }

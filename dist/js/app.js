@@ -8,6 +8,11 @@ var UIController=(function(){
         card_cv:"#card_cv",
         holder_name:".holder_name",
         company:".image_com",
+        month:".valid_month",
+        year:".valid_year",
+        image:".img",
+        front_image:".front_img",
+        cv_hide:".cv_hide"
     };
     var selector={
         card_number:document.querySelector(DOMstring.card_number),
@@ -16,10 +21,14 @@ var UIController=(function(){
         card_year:document.querySelector(DOMstring.card_year),
         card_cv:document.querySelector(DOMstring.card_cv),
         company:document.querySelector(DOMstring.company),
-        name:document.querySelector(DOMstring.holder_name)
+        name:document.querySelector(DOMstring.holder_name),
+        month:document.querySelector(DOMstring.month),
+        year:document.querySelector(DOMstring.year),
+        image:document.querySelector(DOMstring.image),
+        front_image:document.querySelector(DOMstring.front_image),
+        cv_hide:document.querySelector(DOMstring.cv_hide)
     };
     
-    var month_arr=['January','February','March','April','May','June','July','August','September','October','November','December'];
     return{
         getDOM:function(){
             return DOMstring;
@@ -60,6 +69,26 @@ var UIController=(function(){
             selector.name.innerHTML=name;
             if(name.length===0){
                 selector.name.innerHTML="YOUR NAME";
+            }
+        },
+        AddCardMonth:function(month){
+            if(month.length===1)
+                month="0"+month;
+            selector.month.innerHTML=month;
+        },
+        AddCardYear:function(year){
+            selector.year.innerHTML=year.substring(2,4);
+        },
+        AddCardCV:function(len){
+            selector.front_image.classList.add("rotate_front")
+            setTimeout(function(){            
+                selector.image.classList.add("rotate_clock");
+            },450);
+            for(var i=0;i<len;i++){
+                document.querySelector(`.cv-${i+1}`).innerHTML="*";
+            }
+            for(i=len+1;i<=4;i++){
+                document.querySelector(`.cv-${i}`).innerHTML="";
             }
         }
     }
@@ -134,28 +163,29 @@ var Controller=(function(UICtrl){
         //1.get the input 
         var month=selector.card_month.value;
         //2.updating the card front
-        //UICtrl.AddCardMonth(month);
+        UICtrl.AddCardMonth(month);
     };
 
     var ManageCardYear=function(event){
         //1.get the input
         var year=selector.card_year.value;
         //2.updating the card front
-        //UICtrl.AddCardYear(year);
+        UICtrl.AddCardYear(year);
     };
 
     var ManageCardCV=function(event){
         //1.get the input
         var cv=selector.card_cv.value;
-        if(!(parseInt(event.data)>=0 && parseInt(event.data)<=9) && event.inputType!=="deleteContentBackward"){
+    
+        if(!(parseInt(event.data)>=0 && parseInt(event.data)<=9) && event.inputType!=="deleteContentBackward" && event.type!="focus"){
             //startindex and lastindex
             cv=cv.substring(0,cv.length-1);
         }
         //2.updating the input type
         selector.card_cv.value=cv;
-
+        
         //3.updating the card rear
-        //UICtrl.AddCardCV(cv);
+        UICtrl.AddCardCV(cv.length);
 
     };
 
@@ -175,6 +205,16 @@ var Controller=(function(UICtrl){
         selector.card_cv.addEventListener("input",function(event){
             ManageCardCV(event);
         });
+        selector.card_cv.addEventListener("focus",function(event){
+            ManageCardCV(event);
+        });
+        selector.card_cv.addEventListener("blur",function(event){
+            selector.image.classList.remove("rotate_clock");
+            setTimeout(function(){
+                selector.front_image.classList.remove("rotate_front");
+            },450)
+        });
+        
     };
 
     return{
