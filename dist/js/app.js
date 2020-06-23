@@ -7,22 +7,53 @@ var UIController=(function(){
         card_year:"#card_year",
         card_cv:"#card_cv",
         holder_name:".holder_name",
-        company:".front_company",
+        company:".image_com",
     };
     var selector={
         card_number:document.querySelector(DOMstring.card_number),
         card_holder:document.querySelector(DOMstring.card_holder),
         card_month:document.querySelector(DOMstring.card_month),
         card_year:document.querySelector(DOMstring.card_year),
-        card_cv:document.querySelector(DOMstring.card_cv)
+        card_cv:document.querySelector(DOMstring.card_cv),
+        company:document.querySelector(DOMstring.company)
     };
-
+    
+    var month_arr=['January','February','March','April','May','June','July','August','September','October','November','December'];
     return{
         getDOM:function(){
             return DOMstring;
         },
         getSelector:function(){
             return selector;
+        },
+        AddCardNumber:function(str){
+            for(var i=0;i<str.length;i++){
+                if(i<=3 || i>=12){
+                    document.querySelector(`.card_no-${i+1}`).textContent=str[i];
+                }
+                else{
+                    document.querySelector(`.card_no-${i+1}`).textContent="*";
+                }
+            }
+            for(var i=str.length+1;i<=16;i++){
+                document.querySelector(`.card_no-${i}`).textContent="X";
+                if(i==1){
+                    selector.company.classList.remove('mastercard_company');
+                    selector.company.classList.remove('visa_company');
+                    selector.company.classList.remove('american_company');
+                }
+            }
+            if(str.length>0){       
+                if(str[0]==="3"){
+                    selector.company.classList.add('mastercard_company');
+                }
+                else if(str[0]==="4"){
+                    selector.company.classList.add('visa_company');
+                }
+                else{
+                    selector.company.classList.add('american_company');
+                }
+            }
         }
     }
 })();
@@ -65,9 +96,14 @@ var Controller=(function(UICtrl){
         //4.Updating the input text
         selector.card_number.value=copy;
 
-        //5.updating the cardfront(the number is stored in str)
-        //UICtrl.AddCardNumber(str);
-
+        //5.getting back the str for cardfront
+        var send=str.split("-");
+        str="";
+        for(var i=0;i<send.length;i++){
+            str+=send[i];
+        }
+        //6.updating the cardfront(the number is stored in str)
+        UICtrl.AddCardNumber(str);
     };
 
     var ManageCardHolder=function(event){
